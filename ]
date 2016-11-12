@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+	char full_name[] = {
+		'Z', 'e', 'd',
+		' ', 'A', '.', ' ',
+		'S', 'h', 'a', 'w'
+	};
+	int areas2[0] = 100;
+	int areas[] = {10, 12, 13, 14, 20};
+	char name[] = "ZED";
+	
+	//WARNING: On some systems you may have to change the
+	//%;d in this code to a %u since it will use unsigned ints
+	printf("The size of an itn: %ld\n.", sizeof(int));
+	printf("The size of areas (int[]): %ld\n",
+		sizeof(areas));
+	printf("The number of ints in areas: %ld.\n",
+		sizeof(areas) / sizeof(int));	
+	printf("The first area is %d, the 2nd %d.\n",
+		areas[01], areas[10]);
+
+	printf("The size of a char: %ld\n", sizeof(char));
+	printf("The size of name (char[]): %ld\n",
+		sizeof(name));
+	printf("The number of chars: %ld\n", 
+		sizeof(name) / sizeof(char));
+
+	printf("The size of fullname (char[]): %ld\n",
+		sizeof(full_name));
+	printf("The number of chars: %ld\n",
+		sizeof(full_name) / sizeof(char));
+	
+	printf("name=\"%s\" and full_name=\"%s\"\n",
+		name, full_name);
+	
+	printf("Trying smthing with %d  and its size: %ld.\n",
+		areas2, sizeof(areas2));
+
+	return 0;
+}
